@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Controller">
+   <center>
+      <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #419dc4;">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" />
+          <ColumnConstraints hgrow="SOMETIMES" />
+            <ColumnConstraints hgrow="SOMETIMES" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints vgrow="SOMETIMES" />
+          <RowConstraints vgrow="SOMETIMES" />
+          <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+          <RowConstraints vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="buttonSqRt" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="88.0" prefWidth="80.0" stylesheets="/style/buttonStyle.css" text="√" textFill="WHITE">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="buttonPercent" alignment="CENTER" mnemonicParsing="false" prefHeight="88.0" prefWidth="80.0" stylesheets="/style/buttonStyle.css" text="\%" textFill="WHITE" GridPane.columnIndex="2">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="buttonPlusMinus" alignment="CENTER" mnemonicParsing="false" prefHeight="88.0" prefWidth="80.0" stylesheets="/style/buttonStyle.css" text="+/-" textFill="WHITE" GridPane.columnIndex="1">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Button>
+            <Button fx:id="button8" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="88.0" prefWidth="80.0" stylesheets="/style/buttonStyle.css" text="8" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="button0" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="88.0" prefWidth="80.0" stylesheets="/style/buttonStyle.css" text="0" textFill="WHITE" GridPane.rowIndex="4">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="button1" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="88.0" prefWidth="80.0" stylesheets="/style/buttonStyle.css" text="1" textFill="WHITE" GridPane.rowIndex="3">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="button4" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="88.0" prefWidth="80.0" stylesheets="/style/buttonStyle.css" text="4" textFill="WHITE" GridPane.rowIndex="2">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="button7" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="88.0" prefWidth="80.0" stylesheets="/style/buttonStyle.css" text="7" textFill="WHITE" GridPane.rowIndex="1">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="buttonDot" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="88.0" prefWidth="80.0" stylesheets="/style/buttonStyle.css" text="." textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="88.0" prefWidth="80.0" stylesheets="/style/buttonStyle.css" text="Clear" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Button>
+            <Button fx:id="button3" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="88.0" prefWidth="80.0" stylesheets="/style/buttonStyle.css" text="3" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="button2" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="88.0" prefWidth="80.0" stylesheets="/style/buttonStyle.css" text="2" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="button6" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="88.0" prefWidth="80.0" stylesheets="/style/buttonStyle.css" text="6" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="button5" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="88.0" prefWidth="80.0" stylesheets="/style/buttonStyle.css" text="5" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="button9" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="88.0" prefWidth="80.0" stylesheets="/style/buttonStyle.css" text="9" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+   </center>
+   <right>
+      <GridPane prefHeight="440.0" prefWidth="80.0" style="-fx-background-color: #afe2f8;" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+          <RowConstraints vgrow="SOMETIMES" />
+          <RowConstraints vgrow="SOMETIMES" />
+          <RowConstraints vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="buttonSquared" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="88.0" prefWidth="80.0" stylesheets="/style/buttonStyle.css" text="x²" textFill="WHITE">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Button>
+            <Button fx:id="buttonPlus" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="88.0" prefWidth="80.0" stylesheets="/style/buttonStyle.css" text="+" textFill="WHITE" GridPane.rowIndex="4">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="buttonMinus" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="88.0" prefWidth="80.0" stylesheets="/style/buttonStyle.css" text="-" textFill="WHITE" GridPane.rowIndex="3">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="buttonMultiplied" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="88.0" prefWidth="80.0" stylesheets="/style/buttonStyle.css" text="X" textFill="WHITE" GridPane.rowIndex="2">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="buttonDivided" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="88.0" prefWidth="80.0" stylesheets="/style/buttonStyle.css" text="/" textFill="WHITE" GridPane.rowIndex="1">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+   </right>
+   <bottom>
+      <AnchorPane prefHeight="58.0" prefWidth="320.0" style="-fx-background-color: #ffdd44;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="buttonEquals" mnemonicParsing="false" prefHeight="62.0" prefWidth="320.0" stylesheets="/style/buttonStyle.css" text="=" textAlignment="CENTER">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </bottom>
+   <top>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="100.0" prefWidth="320.0">
+               <children>
+                  <Label fx:id="resultLabel" prefHeight="18.0" prefWidth="320.0" />
+                  <TextField fx:id="resultTextArea" layoutY="18.0" prefHeight="82.0" prefWidth="320.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>
