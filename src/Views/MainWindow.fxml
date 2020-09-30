@@ -11,6 +11,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
+<?import javafx.scene.control.TextArea?>
 <BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Controller">
    <center>
       <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #419dc4;">
@@ -163,7 +164,7 @@
             <AnchorPane prefHeight="100.0" prefWidth="320.0">
                <children>
                   <Label fx:id="resultLabel" prefHeight="18.0" prefWidth="320.0" />
-                  <TextField fx:id="resultTextArea" layoutY="18.0" prefHeight="82.0" prefWidth="320.0" />
+                  <TextArea fx:id="resultTextArea" layoutY="18.0" prefHeight="82.0" prefWidth="320.0" styleClass="display"/>
                </children>
             </AnchorPane>
          </children>
