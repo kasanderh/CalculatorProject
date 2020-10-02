@@ -1,5 +1,6 @@
 package Controllers;
 
+import Main.Calculation;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -23,36 +24,60 @@ public class Controller {
 
     private String currentText;
 
+    private boolean start = true;
+    private Calculation calculation = new Calculation(0,0,"");
+
     //Eventhandler number buttons
     // Switch statement?
 
+//    @FXML
+//    public void handleNumberButtons(Event event) {
+//        currentText = resultTextArea.getText();
+//
+//        if(resultTextArea.getText().equals("")) {
+//            resultTextArea.setText("");
+//            currentText = resultTextArea.getText();
+//        }
+//        Button buttonClicked = (Button) event.getSource();
+//
+//        System.out.println(buttonClicked.getText());
+//        int numberClicked = Integer.parseInt(buttonClicked.getText());
+//        if(numberClicked > (-1) && numberClicked < 10) {
+//            resultTextArea.appendText(buttonClicked.getText());
+//            System.out.println(buttonClicked.getText() + " was clicked!");
+//        } else {
+//            System.out.println("Not a number clicked");
+//        }
+//
+//    }
+
     @FXML
     public void handleNumberButtons(Event event) {
-        currentText = resultTextArea.getText();
-        if(resultTextArea.getText().equals("0")) {
-            resultTextArea.setText("");
-            currentText = resultTextArea.getText();
-        }
         Button buttonClicked = (Button) event.getSource();
-
-        System.out.println(buttonClicked.getText());
-        int numberClicked = Integer.parseInt(buttonClicked.getText());
-        if(numberClicked > (-1) && numberClicked < 10) {
-            resultTextArea.appendText(buttonClicked.getText());
-            System.out.println(buttonClicked.getText() + " was clicked!");
+        double numberClicked = Double.parseDouble(buttonClicked.getText());
+        if(start) {
+            calculation.setNumber1(numberClicked);
+            System.out.println("Number 1: " + numberClicked + " was selected!");
+            resultTextArea.setText(String.valueOf(numberClicked));
+            start = false;
         } else {
-            System.out.println("Not a number clicked");
+            calculation.setNumber2(numberClicked);
+            System.out.println("Number 2: " + numberClicked + " was selected!");
+            resultTextArea.appendText(String.valueOf(numberClicked));
         }
-
     }
+
 
     @FXML
     public void operations(Event event) {
-        if(resultTextArea.equals("") || resultTextArea == null) {
-            resultLabel.setText("Please enter a number first.");
-        } else {
+        String operator = ((Button)event.getSource()).getText();
 
-        }
+//        if(resultTextArea.equals("") || resultTextArea == null) {
+//            resultLabel.setText("Please enter a number first.");
+//        } else if (number2 == 0){
+//            double
+//
+//        }
     }
 
 }
