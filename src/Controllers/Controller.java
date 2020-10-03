@@ -70,7 +70,26 @@ public class Controller {
 
     @FXML
     public void operations(Event event) {
-        String operator = ((Button)event.getSource()).getText();
+        String operator = ((Button) event.getSource()).getText();
+        resultTextArea.appendText(" " + operator + " ");
+        if (operator.equals("=")) {
+            System.out.println("Equals = was clicked");
+//            String result = String.valueOf(calculation.calculation(calculation));
+            String result = String.valueOf(calculation.calculation(calculation.getNumber1(), calculation.getNumber2(), calculation.getOperator()));
+            resultTextArea.setText(result);
+            start = true;
+        } else {
+            System.out.println("Operator set to: " +operator);
+            calculation.setOperator(operator);
+        }
+    }
+
+    @FXML
+    public void clearWindow(Event event) {
+        resultTextArea.setText("");
+    }
+
+}
 
 //        if(resultTextArea.equals("") || resultTextArea == null) {
 //            resultLabel.setText("Please enter a number first.");
@@ -78,6 +97,6 @@ public class Controller {
 //            double
 //
 //        }
-    }
 
-}
+
+
