@@ -6,7 +6,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
 
 
 public class Controller {
@@ -54,12 +53,18 @@ public class Controller {
     @FXML
     public void handleNumberButtons(Event event) {
         Button buttonClicked = (Button) event.getSource();
-        double numberClicked = Double.parseDouble(buttonClicked.getText());
+//        double numberClicked = Double.parseDouble(buttonClicked.getText());
+        int numberClicked = Integer.parseInt(buttonClicked.getText());
         if(start) {
-            calculation.setNumber1(numberClicked);
-            System.out.println("Number 1: " + numberClicked + " was selected!");
-            resultTextArea.setText(String.valueOf(numberClicked));
-            start = false;
+            String inputNumbers = "";
+            if(calculation.getOperator().equals("")) {
+                inputNumbers = inputNumbers + buttonClicked.getText();
+                System.out.println("Num1 is now: " + inputNumbers);
+                calculation.setNumber1((double)Double.parseDouble(inputNumbers));
+                resultTextArea.setText(String.valueOf(inputNumbers));
+            }
+//            System.out.println("Number 1: " + numberClicked + " was selected!");
+//            start = false;
         } else {
             calculation.setNumber2(numberClicked);
             System.out.println("Number 2: " + numberClicked + " was selected!");
@@ -78,9 +83,11 @@ public class Controller {
             String result = String.valueOf(calculation.calculation(calculation.getNumber1(), calculation.getNumber2(), calculation.getOperator()));
             resultTextArea.setText(result);
             start = true;
+            calculation.setOperator("");
         } else {
             System.out.println("Operator set to: " +operator);
             calculation.setOperator(operator);
+            start = false;
         }
     }
 
