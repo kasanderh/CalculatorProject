@@ -6,7 +6,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
 
 
 public class Controller {
@@ -27,29 +26,6 @@ public class Controller {
     private boolean start = true;
     private Calculation calculation = new Calculation(0,0,"");
 
-    //Eventhandler number buttons
-    // Switch statement?
-
-//    @FXML
-//    public void handleNumberButtons(Event event) {
-//        currentText = resultTextArea.getText();
-//
-//        if(resultTextArea.getText().equals("")) {
-//            resultTextArea.setText("");
-//            currentText = resultTextArea.getText();
-//        }
-//        Button buttonClicked = (Button) event.getSource();
-//
-//        System.out.println(buttonClicked.getText());
-//        int numberClicked = Integer.parseInt(buttonClicked.getText());
-//        if(numberClicked > (-1) && numberClicked < 10) {
-//            resultTextArea.appendText(buttonClicked.getText());
-//            System.out.println(buttonClicked.getText() + " was clicked!");
-//        } else {
-//            System.out.println("Not a number clicked");
-//        }
-//
-//    }
 
     @FXML
     public void handleNumberButtons(Event event) {
@@ -81,6 +57,7 @@ public class Controller {
         } else {
             System.out.println("Operator set to: " +operator);
             calculation.setOperator(operator);
+            start = false;
         }
     }
 
@@ -91,12 +68,6 @@ public class Controller {
 
 }
 
-//        if(resultTextArea.equals("") || resultTextArea == null) {
-//            resultLabel.setText("Please enter a number first.");
-//        } else if (number2 == 0){
-//            double
-//
-//        }
 
 
 

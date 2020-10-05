@@ -163,7 +163,7 @@
             <AnchorPane prefHeight="100.0" prefWidth="320.0">
                <children>
                   <Label fx:id="resultLabel" prefHeight="18.0" prefWidth="320.0" />
-                  <TextArea fx:id="resultTextArea" layoutY="18.0" prefHeight="82.0" prefWidth="320.0" styleClass="display" />
+                  <TextArea fx:id="resultTextArea" layoutY="18.0" prefHeight="82.0" prefWidth="320.0" styleClass="display" editable="false" />
                </children>
             </AnchorPane>
          </children>
