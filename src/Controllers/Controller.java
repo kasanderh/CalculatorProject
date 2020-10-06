@@ -35,10 +35,19 @@ public class Controller {
         if(start) {
             String inputNumbers = "";
             if(calculation.getOperator().equals("")) {
-                inputNumbers = inputNumbers + buttonClicked.getText();
-                System.out.println("Num1 is now: " + inputNumbers);
-                calculation.setNumber1((double)Double.parseDouble(inputNumbers));
-                resultTextArea.setText(String.valueOf(inputNumbers));
+                if(calculation.getNumber1() == 0) {
+                    inputNumbers = inputNumbers + buttonClicked.getText();
+                                        System.out.println("Num1 is currently: " + "nada" + " and new number: " + inputNumbers);
+                    calculation.setNumber1((double)Double.parseDouble(inputNumbers));
+                    resultTextArea.setText(String.valueOf(inputNumbers));
+                } else {
+                    double currentNumbers = calculation.getNumber1();
+                    inputNumbers = inputNumbers + buttonClicked.getText();
+                    String newNumbers = currentNumbers + inputNumbers;
+                    System.out.println("Num1 is currently: " + currentNumbers + " and new number: " + inputNumbers + " and together: " + newNumbers);
+                    calculation.setNumber1((double) Double.parseDouble(newNumbers));
+                    resultTextArea.setText(String.valueOf(newNumbers));
+                }
             }
 //            System.out.println("Number 1: " + numberClicked + " was selected!");
 //            start = false;
