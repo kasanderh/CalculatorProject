@@ -80,6 +80,18 @@ public class Controller {
     @FXML
     public void clearWindow(Event event) {
         resultTextArea.setText("");
+        calculation.setNumber1(0);
+        calculation.setNumber2(0);
+        calculation.setOperator(null);
+        start = true;
+    }
+
+    @FXML
+    public void outputResult(String string) {
+        if (resultTextArea.getText().equals("0")) {
+            resultTextArea.setText(string);
+        }
+        resultTextArea.setText(resultTextArea.getText() + string);
     }
 
 }
