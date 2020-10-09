@@ -15,23 +15,25 @@ public class Calculation {
 
     public double calculation(int num1, int num2, String operator) {
         System.out.println("Calculating with num1 = " + num1 + " and num2 = " + num2 + " and operator: " +operator);
+        Double number1 = (double) num1;
+        Double number2 = (double) num2;
         switch (operator) {
             case "+":
-                return num1 + num2;
+                return number1 + number2;
             case "-":
-                return num1 - num2;
+                return number1 - number2;
             case "X":
-                return num1 * num2;
+                return number1 * number2;
             case "/":
-                return num1 / num2;
+                return number1 / number2;
             case "√":
-                return Math.sqrt(num1);
+                return Math.sqrt(number1);
             case "%":
-                return num1 % num2;
+                return number1 % number2;
             case "+/-":
-                return num1 * (-1);
+                return number1 * (-1);
             case "x²":
-                return num1 * num1;
+                return number1 * number1;
             default:
                 System.out.println("Error");
                 return 0;

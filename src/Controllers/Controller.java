@@ -76,7 +76,7 @@ public class Controller {
             } else {
                 // here the numberedEntered is not the first digit.
                 int currentNumber = calculation.getNumber1();
-                System.out.println("Current number1: " + currentNumber);
+                System.out.println("Old number 1: " + currentNumber);
                 int enteredInt = Integer.parseInt(buttonClicked.getText());
                 //int newNumber = currentNumber + Integer.parseInt(buttonClicked.getText());
                 String newNumber = currentNumber + buttonClicked.getText();
@@ -89,20 +89,32 @@ public class Controller {
         } else {
             // not start, so operator != "";, and num1 is selected
             if (calculation.getNumber2() == 0) {
-                String inputNumber2 = buttonClicked.getText();
+                int inputNumber2 = Integer.parseInt(buttonClicked.getText());
                 System.out.println("Input number 2 is now: " + inputNumber2);
-                // test: Sout "Number2 is now:" + num2
-                calculation.setNumber2(Integer.parseInt(inputNumber2));
-                outputResult(inputNumber2);
+                calculation.setNumber2(inputNumber2);
+                outputResult(getCurrentOutput() + buttonClicked.getText());
+//                String inputNumber2 = buttonClicked.getText();
+//                System.out.println("Input number 2 is now: " + inputNumber2);
+//                // test: Sout "Number2 is now:" + num2
+//                calculation.setNumber2(Integer.parseInt(inputNumber2));
+//                outputResult(inputNumber2);
                 // or setOutput(String.valueOf(inputNumber2));
 
             } else {
                 // here the numberedEntered is not the first digit.
-                int currentNumber2 = (int) calculation.getNumber2();
-                int newNumber2 = currentNumber2 + Integer.parseInt(buttonClicked.getText());
-                int enteredDouble2 = Integer.parseInt(buttonClicked.getText());
-                calculation.setNumber2(currentNumber2 + enteredDouble2);
-                outputResult(Integer.toString(newNumber2));
+                int currentNumber = calculation.getNumber2();
+                System.out.println("Old number 2: " + currentNumber);
+                String newNumber = currentNumber + buttonClicked.getText();
+                System.out.println("New Number2: " + newNumber);
+                int intNewNumber = Integer.parseInt(newNumber);
+                calculation.setNumber2(intNewNumber);
+                String newOutput = getCurrentOutput() + buttonClicked.getText();
+                outputResult(newOutput);
+//                int currentNumber2 = (int) calculation.getNumber2();
+//                int newNumber2 = currentNumber2 + Integer.parseInt(buttonClicked.getText());
+//                int enteredDouble2 = Integer.parseInt(buttonClicked.getText());
+//                calculation.setNumber2(currentNumber2 + enteredDouble2);
+//                outputResult(Integer.toString(newNumber2));
                                 //code for num2
             }
         }
@@ -143,6 +155,14 @@ public class Controller {
         }
         resultTextArea.setText("");
         resultTextArea.setText(resultTextArea.getText() + string);
+    }
+
+    @FXML
+    public String getCurrentOutput() {
+        if (resultTextArea.getText().equals("0")) {
+            return "";
+        }
+        return resultTextArea.getText();
     }
 
 }
