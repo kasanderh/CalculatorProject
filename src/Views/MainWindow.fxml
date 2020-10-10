@@ -67,7 +67,7 @@
                   <Font size="36.0" />
                </font>
             </Button>
-            <Button fx:id="buttonDot" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleNumberButtons" prefHeight="88.0" prefWidth="80.0" stylesheets="/style/buttonStyle.css" text="." textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <Button fx:id="buttonDot" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#operations" prefHeight="88.0" prefWidth="80.0" stylesheets="/style/buttonStyle.css" text="." textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <font>
                   <Font size="36.0" />
                </font>
