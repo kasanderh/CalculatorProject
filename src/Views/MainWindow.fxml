@@ -47,7 +47,7 @@
                   <Font size="36.0" />
                </font>
             </Button>
-            <Button fx:id="button0" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleNumberButtons" prefHeight="88.0" prefWidth="80.0" stylesheets="/style/buttonStyle.css" text="0" textFill="WHITE" GridPane.rowIndex="4">
+            <Button fx:id="button0" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleNumberButtons" prefHeight="88.0" prefWidth="160.0" stylesheets="/style/buttonStyle.css" text="0" textFill="WHITE" GridPane.columnSpan="2" GridPane.rowIndex="4">
                <font>
                   <Font size="36.0" />
                </font>
@@ -63,11 +63,6 @@
                </font>
             </Button>
             <Button fx:id="button7" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleNumberButtons" prefHeight="88.0" prefWidth="80.0" stylesheets="/style/buttonStyle.css" text="7" textFill="WHITE" GridPane.rowIndex="1">
-               <font>
-                  <Font size="36.0" />
-               </font>
-            </Button>
-            <Button fx:id="buttonDot" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#operations" prefHeight="88.0" prefWidth="80.0" stylesheets="/style/buttonStyle.css" text="." textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <font>
                   <Font size="36.0" />
                </font>
@@ -163,7 +158,7 @@
             <AnchorPane prefHeight="100.0" prefWidth="320.0">
                <children>
                   <Label fx:id="resultLabel" prefHeight="18.0" prefWidth="320.0" />
-                  <TextArea fx:id="resultTextArea" layoutY="18.0" prefHeight="82.0" prefWidth="320.0" styleClass="display" editable="false" />
+                  <TextArea fx:id="resultTextArea" editable="false" layoutY="18.0" prefHeight="82.0" prefWidth="320.0" styleClass="display" />
                </children>
             </AnchorPane>
          </children>
