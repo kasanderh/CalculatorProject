@@ -76,32 +76,40 @@ public class Controller {
     @FXML
     public void operations(Event event) {
         String operator = ((Button) event.getSource()).getText();
-        if (calculation.getOperator().equals("")) {
-            resultTextArea.appendText(" " + operator + " ");
-//            if (operator.equals("=")) {
-//                System.out.println("Equals = was clicked");
-//                String result = String.valueOf(calculation.calculation(calculation.getNumber1(), calculation.getNumber2(), calculation.getOperator()));
-//                resultTextArea.setText(result);
-//                start = true;
-//                calculation.setOperator("");
-//            } else {
-                System.out.println("Operator set to: " + operator);
-                calculation.setOperator(operator);
-                start = false;
-//            }
-        } else if (operator.equals("=")) {
-            System.out.println("Equals = was clicked");
-            String result = String.valueOf(calculation.calculation(calculation.getNumber1(), calculation.getNumber2(), calculation.getOperator()));
-            resultTextArea.setText(result);
-            resultLabel.setText("Result: ");
-            start = true;
-            calculation.setOperator("");
-
-        } else {
-            System.out.println("Operator already chosen.");
-            resultLabel.setText("Operator already chosen");
-        }
+//        if (calculation.getOperator().equals(null)) {
+//            resultTextArea.appendText(" " + operator + " ");
+            if (operator.equals("=")) {
+                System.out.println("Equals = was clicked");
+                String result = String.valueOf(calculation.calculation(calculation.getNumber1(), calculation.getNumber2(), calculation.getOperator()));
+                resultTextArea.setText(result);
+                start = true;
+                calculation.setOperator("");
+            } else {
+                if (calculation.getOperator().equals("")) {
+                    resultTextArea.appendText(" " + operator + " ");
+                    System.out.println("Operator set to: " + operator);
+                    calculation.setOperator(operator);
+                    start = false;
+                } else {
+                    System.out.println("Operator already chosen.");
+                    resultLabel.setText("Operator already chosen");
+                }
+            }
     }
+//            }
+//        } else if (operator.equals("=")) {
+//            System.out.println("Equals = was clicked");
+//            String result = String.valueOf(calculation.calculation(calculation.getNumber1(), calculation.getNumber2(), calculation.getOperator()));
+//            resultTextArea.setText(result);
+//            resultLabel.setText("Result: ");
+//            start = true;
+//            calculation.setOperator("");
+//
+//        } else {
+//            System.out.println("Operator already chosen.");
+//            resultLabel.setText("Operator already chosen");
+//        }
+
 
     @FXML
     public void clearWindow() {
@@ -109,7 +117,7 @@ public class Controller {
         resultLabel.setText("");
         calculation.setNumber1(0);
         calculation.setNumber2(0);
-        calculation.setOperator(null);
+        calculation.setOperator("");
         System.out.println("Clear!");
         start = true;
     }
