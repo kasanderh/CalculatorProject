@@ -84,12 +84,30 @@ public class Controller {
                 resultTextArea.setText(result);
                 start = true;
                 calculation.setOperator("");
+//                try{
+//                    calculation.setNumber1(Integer.parseInt(resultTextArea.getText()));
+//                    calculation.setNumber2(0);
+//                    System.out.println("New num1: "+calculation.getNumber1() + " and new num 2: " + calculation.getNumber2());
+//                } catch (NumberFormatException e) {
+//                    System.out.println("Error: " + e.getMessage());
+//                }
             } else {
                 if (calculation.getOperator().equals("")) {
                     resultTextArea.appendText(" " + operator + " ");
                     System.out.println("Operator set to: " + operator);
                     calculation.setOperator(operator);
                     start = false;
+                } else if(calculation.getNumber2() == 0 ) {
+                    String currentOutput = resultTextArea.getText();
+                    if(currentOutput != null && currentOutput.length() > 0 ) {
+                        System.out.println("New operator chosen.");
+                        resultLabel.setText("New operator chosen.");
+                        String newOutput = currentOutput.substring(0, currentOutput.length()-2);
+                        resultTextArea.setText(newOutput + " " + ((Button) event.getSource()).getText() + " ");
+                    } else {
+                        resultLabel.setText("Cannot set new operator");
+                    }
+
                 } else {
                     System.out.println("Operator already chosen.");
                     resultLabel.setText("Operator already chosen");
