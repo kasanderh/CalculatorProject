@@ -25,6 +25,7 @@ public class Main extends Application {
         primaryStage.setResizable(false);
         primaryStage.show();
         primaryStage.getIcons().add(new Image("/style/calculator.png"));
+
     }
 
 

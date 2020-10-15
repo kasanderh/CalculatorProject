@@ -76,8 +76,6 @@ public class Controller {
     @FXML
     public void operations(Event event) {
         String operator = ((Button) event.getSource()).getText();
-//        if (calculation.getOperator().equals(null)) {
-//            resultTextArea.appendText(" " + operator + " ");
             if (operator.equals("=")) {
                 System.out.println("Equals = was clicked");
                 String result = String.valueOf(calculation.calculation(calculation.getNumber1(), calculation.getNumber2(), calculation.getOperator()));
@@ -103,7 +101,7 @@ public class Controller {
                         System.out.println("New operator chosen.");
                         resultLabel.setText("New operator chosen.");
                         String newOutput = currentOutput.substring(0, currentOutput.length()-2);
-                        resultTextArea.setText(newOutput + " " + ((Button) event.getSource()).getText() + " ");
+                        resultTextArea.setText(newOutput +  ((Button) event.getSource()).getText() + " ");
                     } else {
                         resultLabel.setText("Cannot set new operator");
                     }
