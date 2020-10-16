@@ -13,10 +13,11 @@ public class Calculation {
     }
 
 
-    public double calculation(int num1, int num2, String operator) {
-        System.out.println("Calculating with num1 = " + num1 + " and num2 = " + num2 + " and operator: " +operator);
-        Double number1 = (double) num1;
-        Double number2 = (double) num2;
+    public double calculation() {
+        //int num1, int num2, String operator
+//        System.out.println("Calculating with num1 = " + num1 + " and num2 = " + num2 + " and operator: " +operator);
+        Double number1 = (double) getNumber1();
+        Double number2 = (double) getNumber2();
         switch (operator) {
             case "+":
                 return number1 + number2;

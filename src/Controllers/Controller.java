@@ -16,11 +16,6 @@ public class Controller {
     @FXML
     private Label resultLabel;
 
-    @FXML
-    private Button button0, button1, button2, button3, button4, button5, button6, button7, button8, button9
-            ,buttonPlus, buttonMinus, buttonEquals, buttonSqRt, buttonSquared, buttonPlusMinus, buttonMultiplied, buttonDivided
-            ,buttonDot, buttonClear, buttonPercent;
-
 
     private boolean start = true;
     private Calculation calculation = new Calculation(0,0,"");
@@ -41,7 +36,7 @@ public class Controller {
                 // Here the numberedEntered is not the first digit in num1.
                 int currentNumber = calculation.getNumber1();
                 System.out.println("Old number 1: " + currentNumber);
-                int enteredInt = Integer.parseInt(buttonClicked.getText());
+//                int enteredInt = Integer.parseInt(buttonClicked.getText());
                 String newNumber = currentNumber + buttonClicked.getText();
                 System.out.println("New Number1: " +newNumber);
                 int intNewNumber = Integer.parseInt(newNumber);
@@ -78,7 +73,7 @@ public class Controller {
         String operator = ((Button) event.getSource()).getText();
             if (operator.equals("=")) {
                 System.out.println("Equals = was clicked");
-                String result = String.valueOf(calculation.calculation(calculation.getNumber1(), calculation.getNumber2(), calculation.getOperator()));
+                String result = String.valueOf(calculation.calculation());
                 resultTextArea.setText(result);
                 start = true;
                 calculation.setOperator("");
@@ -89,6 +84,15 @@ public class Controller {
 //                } catch (NumberFormatException e) {
 //                    System.out.println("Error: " + e.getMessage());
 //                }
+            } else if (operator.equals("+/-")) {
+                calculation.setOperator(operator);
+                System.out.println("Sign switch +/- was clicked");
+                String result = String.valueOf(calculation.calculation());
+                resultTextArea.setText(result);
+//                System.out.println(Integer.parseInt(resultTextArea.getText()));
+//                calculation.setNumber1(Integer.parseInt(resultTextArea.getText()));
+                calculation.setOperator("");
+
             } else {
                 if (calculation.getOperator().equals("")) {
                     resultTextArea.appendText(" " + operator + " ");
