@@ -17,6 +17,12 @@ Needs JavaFX 11.0.2 to run.
 ```bash
 https://gluonhq.com/products/javafx/
 ```
+## Known bugs
+
+* Bug when selecting operator before number
+* Bug when continuing operations after +/- result shows
+* Bug when entering a very long number
+* Not possible to calculate with more than two numbers
 
 ## Future Implementations
 
