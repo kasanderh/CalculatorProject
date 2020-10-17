@@ -36,7 +36,6 @@ public class Controller {
                 // Here the numberedEntered is not the first digit in num1.
                 int currentNumber = calculation.getNumber1();
                 System.out.println("Old number 1: " + currentNumber);
-//                int enteredInt = Integer.parseInt(buttonClicked.getText());
                 String newNumber = currentNumber + buttonClicked.getText();
                 System.out.println("New Number1: " +newNumber);
                 int intNewNumber = Integer.parseInt(newNumber);
@@ -116,20 +115,6 @@ public class Controller {
                 }
             }
     }
-//            }
-//        } else if (operator.equals("=")) {
-//            System.out.println("Equals = was clicked");
-//            String result = String.valueOf(calculation.calculation(calculation.getNumber1(), calculation.getNumber2(), calculation.getOperator()));
-//            resultTextArea.setText(result);
-//            resultLabel.setText("Result: ");
-//            start = true;
-//            calculation.setOperator("");
-//
-//        } else {
-//            System.out.println("Operator already chosen.");
-//            resultLabel.setText("Operator already chosen");
-//        }
-
 
     @FXML
     public void clearWindow() {
@@ -160,8 +145,3 @@ public class Controller {
     }
 
 }
-
-
-
-
-
