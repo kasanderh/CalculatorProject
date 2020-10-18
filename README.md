@@ -6,7 +6,7 @@ Calculadora is a calculator application where one can perform calculations such 
 <br />
 <p align="center">
   <a>
-    <img src="src/style/Sample.png" alt="Logo" width="600" height="500">
+    <img src="src/style/sample.png" alt="Logo" width="600" height="500">
   </a>
 </p>
 
