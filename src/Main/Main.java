@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 
 /**
  * This is a calculator application where one can perform simple calculations.
- * Built 5-11. October 2020
+ * Built 5-17. October 2020
  * @author Kasanderh
  *
  * Application icon made by Freepik from www.flaticon.com

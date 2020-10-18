@@ -199,11 +199,9 @@
    <top>
       <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <AnchorPane prefHeight="100.0" prefWidth="320.0">
-            <children>
-               <Label fx:id="resultLabel" prefHeight="18.0" prefWidth="320.0" style="-fx-background-color: #ffdd44;"/>
-               <TextArea fx:id="resultTextArea" editable="false" layoutY="18.0" prefHeight="82.0" prefWidth="320.0"
-                         styleClass="display"/>
-            </children>
+            <Label fx:id="resultLabel" prefHeight="18.0" prefWidth="320.0" style="-fx-background-color: #ffdd44;"/>
+            <TextArea fx:id="resultTextArea" editable="false" layoutY="18.0" prefHeight="82.0" prefWidth="320.0"
+                      styleClass="display"/>
          </AnchorPane>
       </HBox>
    </top>
