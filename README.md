@@ -17,11 +17,10 @@ Needs JavaFX 11.0.2 to run.
 ```bash
 https://gluonhq.com/products/javafx/
 ```
-## Known bugs
+## Known bugs and issues
 
-* Bug when continuing operations after +/- result shows
-* Bug when entering a very long number
-* Not possible to calculate with more than two numbers
+* <a href="https://github.com/kasanderh/CalculatorProject/issues"> See issues for more information</a>
+ 
 
 ## Future Implementations
 
